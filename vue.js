@@ -354,7 +354,7 @@ function def (obj, key, val, enumerable) {
 }
 
 /**
- * Parse simple path.
+ * Parse simple path.   正则不懂，先放一放。。。。。
  */
 var bailRE = /[^\w.$]/;
 function parsePath (path) {
