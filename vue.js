@@ -231,7 +231,7 @@ function looseEqual (a, b) {
     return false
   }
 }
-
+//判断一个对象在对象数组中是否存在，存在则返回所在位置
 function looseIndexOf (arr, val) {
   for (var i = 0; i < arr.length; i++) {
     if (looseEqual(arr[i], val)) { return i }
@@ -575,7 +575,7 @@ Dep.prototype.removeSub = function removeSub (sub) {
   remove$1(this.subs, sub);
 };
 
-Dep.prototype.depend = function depend () {
+Dep.prototype.depend = function depend () {//---------------？？？？？？？？？？？？？--------这个是啥，添加依赖？
   if (Dep.target) {
     Dep.target.addDep(this);
   }
@@ -585,7 +585,7 @@ Dep.prototype.notify = function notify () {
   // stablize the subscriber list first
   var subs = this.subs.slice();
   for (var i = 0, l = subs.length; i < l; i++) {
-    subs[i].update();
+    subs[i].update();//---------------？？？？？？？？？？？？？--------这个update哪来的
   }
 };
 
